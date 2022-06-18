@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     "mptt",
     "djoser",
     "rest_framework",
+    "rest_framework.authtoken",
     "drf_spectacular_sidecar",
     "drf_spectacular",
     "django.contrib.admin",
@@ -151,6 +152,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "DEFAULT_AUTHENTICATION_CLASSES": (
         # "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication",
         "rest_framework_simplejwt.authentication.JWTAuthentication",
     ),
