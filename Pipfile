@@ -1,0 +1,28 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[packages]
+Django = "==3.2.8"
+django-filter = "*"
+django-mptt = "*"
+djangorestframework = "*"
+djangorestframework-simplejwt = "*"
+djoser = "*"
+
+[dev-packages]
+black = "*"
+coverage = "*"
+factory-boy = "*"
+flake8 = "*"
+flake8-debugger = "*"
+ipython = "*"
+isort = "*"
+jupyter = "*"
+
+[requires]
+python_version = "3.8"
+
+[packages.drf-spectacular]
+extras = [ "sidecar",]
