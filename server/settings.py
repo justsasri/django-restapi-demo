@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     "api",
     "mptt",
     "djoser",
+    'django_filters',
     "rest_framework",
     "rest_framework.authtoken",
     "drf_spectacular_sidecar",

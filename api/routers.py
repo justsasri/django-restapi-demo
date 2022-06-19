@@ -3,10 +3,17 @@ from djoser.views import TokenCreateView, TokenDestroyView, UserViewSet
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt import views as jwt_views
 
+from .views import CategoryViewSet, CourseViewSet, LessonViewSet
+
 router = DefaultRouter()
 router.register("users", UserViewSet, basename="user")
+router.register("categories", CategoryViewSet, basename="category")
+router.register("courses", CourseViewSet, basename="course")
+router.register("lessons", LessonViewSet, basename="lesson")
+
 
 app_name = "v1"
+
 
 urlpatterns = router.urls + [
     re_path(r"^auth/token/login/?$", TokenCreateView.as_view(), name="login"),

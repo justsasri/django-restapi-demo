@@ -22,8 +22,8 @@ class LessonListSerializer(serializers.ModelSerializer):
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    category = CategorySerializer()
-    lessons = LessonListSerializer(many=True)
+    category = CategorySerializer(required=False)
+    lessons = LessonListSerializer(read_only=True, many=True)
 
     class Meta:
         model = Course
