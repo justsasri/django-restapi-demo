@@ -10,6 +10,10 @@ env = environ.Env(
     SENTRY_DSN=(str, ""),
     SITE_DOMAIN=(str, "localhost"),
     DEPLOYMENT_ENV=(str, "heroku"),
+    CORS_ALLOW_ALL_ORIGINS=(bool, 0),
+    CORS_ALLOW_CREDENTIALS=(bool, 0),
+    CORS_ALLOWED_ORIGINS=(list, []),
+    CORS_ALLOWED_ORIGIN_REGEXES=(list, []),
     ALLOW_WILD_CARD=(bool, True),
     STORAGE_TYPE=(str, "whitenoise"),
     CLOUDINARY_CLOUD_NAME=(str, ""),
@@ -33,11 +37,11 @@ WSGI_APPLICATION = "server.wsgi.application"
 
 if DEBUG:
     ALLOWED_HOSTS = ["*"]
-    CORS_ALLOW_ALL_ORIGINS = True
-    CORS_ALLOW_CREDENTIALS = True
+    CORS_ALLOW_ALL_ORIGINS = env("CORS_ALLOW_ALL_ORIGINS")
+    CORS_ALLOW_CREDENTIALS = env("CORS_ALLOW_CREDENTIALS")
 else:
-    CORS_ALLOWED_ORIGINS = ["http://127.0.0.1:5500"]
-    CORS_ALLOWED_ORIGIN_REGEXES = ["http://127.0.0.1:5500"]
+    CORS_ALLOWED_ORIGINS = env("CORS_ALLOWED_ORIGINS")
+    CORS_ALLOWED_ORIGIN_REGEXES = env("CORS_ALLOWED_ORIGIN_REGEXES")
 
 
 ##############################################################################
