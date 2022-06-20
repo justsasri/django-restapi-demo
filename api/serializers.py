@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from app.models import Category, Course, Lesson
+from .models import Category, Course, Lesson
 
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -22,8 +22,8 @@ class LessonListSerializer(serializers.ModelSerializer):
 
 
 class CourseSerializer(serializers.ModelSerializer):
-    category = CategorySerializer()
-    lessons = LessonListSerializer(many=True)
+    category = CategorySerializer(required=False)
+    lessons = LessonListSerializer(read_only=True, many=True)
 
     class Meta:
         model = Course

@@ -5,11 +5,19 @@ verify_ssl = true
 
 [packages]
 Django = "==3.2.8"
+django-cors-headers = "*"
+django-environ = "*"
 django-filter = "*"
+django-heroku = "*"
 django-mptt = "*"
+django-redis = "*"
+django-rq = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
 djoser = "*"
+gunicorn = "*"
+sentry-sdk = "*"
+whitenoise = "*"
 
 [dev-packages]
 black = "*"
@@ -25,4 +33,4 @@ jupyter = "*"
 python_version = "3.8"
 
 [packages.drf-spectacular]
-extras = [ "sidecar",]
+extras = ["sidecar"]

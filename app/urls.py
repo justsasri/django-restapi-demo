@@ -1,5 +1,9 @@
-from django.urls import include, path  # noqa
+from django.urls import path
 
-from . import views  # noqa
+from .views import IndexView, LoginView, LogoutView
 
-urlpatterns = []
+urlpatterns = [
+    path("", IndexView.as_view(), name="dashboard-index"),
+    path("login/", LoginView.as_view(), name="dashboard-login"),
+    path("logout/", LogoutView.as_view(), name="dashboard-logout"),
+]

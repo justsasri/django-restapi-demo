@@ -1,0 +1,36 @@
+{% load i18n static %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE|default:"en-us" }}" dir="{{ LANGUAGE_BIDI|yesno:'rtl,ltr,auto' }}">
+  <head>
+    {% block extrahead %}{% endblock %}
+    {% block extrastyle %}{% endblock %}
+    {% block main_css %}{% endblock main_css %}
+    {% block extra_css %}{% endblock extra_css %}
+  </head>
+
+  <body class="{% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now "Z" %}">
+    
+    {% block navbar %}{% endblock navbar %}
+
+    {% block outter_wrapper %}
+      <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+          {% block sidenav_wrapper %}{% endblock %}
+        </div>
+        <div id="layoutSidenav_content">
+          <main>
+            <div class="container-fluid px-4">
+              {% block content_wrapper %}{% endblock %}
+              {% block footer_wrapper %}{% endblock %}
+            </div>
+          </main>
+        </div>
+      </div>
+    {% endblock %}
+    
+    {% block main_js %}{% endblock main_js %}
+    {% block extra_js %}{% endblock extra_js %}
+  </body>
+</html>
