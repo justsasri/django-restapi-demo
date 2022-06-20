@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     "api",
     "mptt",
     "djoser",
-    'django_filters',
+    "django_filters",
     "rest_framework",
     "rest_framework.authtoken",
     "drf_spectacular_sidecar",
@@ -90,7 +90,7 @@ DATABASES = {
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
-AUTH_USER_MODEL = "app.User"
+AUTH_USER_MODEL = "api.User"
 
 AUTH_PASSWORD_VALIDATORS = [
     {

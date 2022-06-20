@@ -1,6 +1,6 @@
 from django_filters.rest_framework.filterset import FilterSet
 
-from app.models import Course
+from .models import Course
 
 
 class CourseAPIFilterset(FilterSet):

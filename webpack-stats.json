@@ -1,0 +1,61 @@
+{
+  "status": "done",
+  "assets": {
+    "js/main.js": {
+      "name": "js/main.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/main.js"
+    },
+    "js/print.js": {
+      "name": "js/print.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/print.js"
+    },
+    "js/shared.js": {
+      "name": "js/shared.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/shared.js"
+    },
+    "js/runtime.js": {
+      "name": "js/runtime.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/runtime.js"
+    },
+    "img/.gitinclude": {
+      "name": "img/.gitinclude",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/img/.gitinclude"
+    },
+    "css/plugins/.gitinclude": {
+      "name": "css/plugins/.gitinclude",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/css/plugins/.gitinclude"
+    },
+    "js/plugins/alpine.min.js": {
+      "name": "js/plugins/alpine.min.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/alpine.min.js"
+    },
+    "js/plugins/chart.js": {
+      "name": "js/plugins/chart.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/chart.js"
+    },
+    "js/plugins/htmx.min.js": {
+      "name": "js/plugins/htmx.min.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/htmx.min.js"
+    },
+    "js/plugins/jquery.min.js": {
+      "name": "js/plugins/jquery.min.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/jquery.min.js"
+    },
+    "js/plugins/masonry.min.js": {
+      "name": "js/plugins/masonry.min.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/masonry.min.js"
+    }
+  },
+  "chunks": {
+    "main": [
+      "js/main.js"
+    ],
+    "print": [
+      "js/print.js"
+    ],
+    "shared": [
+      "js/runtime.js",
+      "js/shared.js"
+    ]
+  }
+}

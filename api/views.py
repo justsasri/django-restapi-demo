@@ -6,11 +6,10 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-from api.serializers import CategorySerializer, CourseSerializer, LessonSerializer
-from app.models import Category, Course, Lesson
-
 from .filters import CourseAPIFilterset
+from .models import Category, Course, Lesson
 from .permissions import IsOwnerOrAdminOrReadOnly
+from .serializers import CategorySerializer, CourseSerializer, LessonSerializer
 
 
 class CategoryViewSet(ModelViewSet):
