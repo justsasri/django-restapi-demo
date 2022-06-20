@@ -6,7 +6,6 @@
   <head>
     {% block extrahead %}{% endblock %}
     {% block extrastyle %}{% endblock %}
-    {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE">{% endblock %}
     {% block main_css %}{% endblock main_css %}
     {% block extra_css %}{% endblock extra_css %}
   </head>
@@ -16,9 +15,18 @@
     {% block navbar %}{% endblock navbar %}
 
     {% block outter_wrapper %}
-      <div id="outter-wrapper">
-        {% block sidenav_wrapper %}{% endblock %}
-        {% block content_wrapper %}{% endblock %}
+      <div id="layoutSidenav">
+        <div id="layoutSidenav_nav">
+          {% block sidenav_wrapper %}{% endblock %}
+        </div>
+        <div id="layoutSidenav_content">
+          <main>
+            <div class="container-fluid px-4">
+              {% block content_wrapper %}{% endblock %}
+              {% block footer_wrapper %}{% endblock %}
+            </div>
+          </main>
+        </div>
       </div>
     {% endblock %}
     

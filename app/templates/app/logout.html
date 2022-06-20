@@ -1,0 +1,24 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block sidenav_wrapper %}{% endblock %}
+{% block navbar %}{% endblock %}
+
+{% block outter_wrapper %}
+<main>
+  <div class="container px-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-5">
+          <h1>See yaaa !</h1>
+          <a href="{% url 'dashboard-login' %}">Login Again ..</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="{% static 'app/js/login.js' %}"></script>
+{% endblock extra_js %}

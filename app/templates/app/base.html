@@ -1,1 +1,31 @@
 {% extends 'app/layout.html' %}
+{% load static %}
+
+
+{% block extrahead %}
+  {% include 'app/includes/meta_tags.html' %}
+{% endblock extrahead %}
+
+{% block main_css %}
+  <link rel="stylesheet" href="{% static 'app/css/main.bundle.css' %}">
+  <script src="{% static 'app/js/plugins/fontawesome.js' %}"></script>
+{% endblock main_css %}
+
+{% block main_js %}
+  <script src="{% static 'app/js/runtime.js' %}"></script>
+  <script src="{% static 'app/js/shared.js' %}"></script>
+  <script src="{% static 'app/js/main.js' %}"></script>
+  <script src="{% static 'app/js/plugins/chart.js' %}"></script>
+{% endblock main_js %}
+
+{% block navbar %}
+  {% include 'app/includes/header.html' %}
+{% endblock navbar %}
+
+{% block sidenav_wrapper %}
+  {% include 'app/includes/sidenav.html' %}
+{% endblock %}
+
+{% block footer_wrapper %}
+  {% include 'app/includes/footer.html' %}
+{% endblock %}

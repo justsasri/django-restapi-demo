@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+
+  web:
+    image: $IMAGE_APP
+    restart: always
+    env_file: ./.env
+    command: >
+      bash -c "
+      python manage.py migrate
+      && python manage.py init_admin
+      && python manage.py update_index
+      && python manage.py collectstatic --noinput
+      && gunicorn server.wsgi:application --bind 0.0.0.0:8000 --log-level=DEBUG
+      "
+    volumes:
+      - ./logs:/app/logs:z
+      - ./staticfiles:/app/staticfiles:z
+      - ./mediafiles:/app/mediafiles:z
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      - redis
+
+  worker:
+    image: $IMAGE_APP
+    restart: always
+    env_file: ./.env
+    command: >
+      bash -c "python manage.py rqworker default"
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    depends_on:
+      - web
+      - redis
+
+  nginx:
+    image: nginx:1.15-alpine
+    restart: always
+    ports:
+      - "8070:80"
+    volumes:
+      - ./nginx:/etc/nginx/conf.d
+      - ./staticfiles:/usr/share/nginx/staticfiles:ro
+      - ./mediafiles:/usr/share/nginx/mediafiles:ro
+    depends_on:
+      - web
+
+  redis:
+    image: redis:6.2.6-alpine
+    restart: always
+    env_file: ./.env
+    volumes:
+      - ./redis/data:/var/lib/redis
+      - ./redis/redis.conf:/usr/local/etc/redis/redis.conf
+    command: redis-server --requirepass $REDIS_PASSWORD

@@ -1,13 +1,33 @@
 {
   "status": "done",
   "assets": {
+    "fonts/materialdesignicons-webfont.eot": {
+      "name": "fonts/materialdesignicons-webfont.eot",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/fonts/materialdesignicons-webfont.eot"
+    },
+    "fonts/materialdesignicons-webfont.woff2": {
+      "name": "fonts/materialdesignicons-webfont.woff2",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/fonts/materialdesignicons-webfont.woff2"
+    },
+    "fonts/materialdesignicons-webfont.woff": {
+      "name": "fonts/materialdesignicons-webfont.woff",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/fonts/materialdesignicons-webfont.woff"
+    },
+    "fonts/materialdesignicons-webfont.ttf": {
+      "name": "fonts/materialdesignicons-webfont.ttf",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/fonts/materialdesignicons-webfont.ttf"
+    },
+    "css/main.bundle.css": {
+      "name": "css/main.bundle.css",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/css/main.bundle.css"
+    },
     "js/main.js": {
       "name": "js/main.js",
       "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/main.js"
     },
-    "js/print.js": {
-      "name": "js/print.js",
-      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/print.js"
+    "js/login.js": {
+      "name": "js/login.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/login.js"
     },
     "js/shared.js": {
       "name": "js/shared.js",
@@ -17,13 +37,13 @@
       "name": "js/runtime.js",
       "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/runtime.js"
     },
-    "img/.gitinclude": {
-      "name": "img/.gitinclude",
-      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/img/.gitinclude"
-    },
     "css/plugins/.gitinclude": {
       "name": "css/plugins/.gitinclude",
       "path": "/home/rizkisasri/django-restapi-demo/app/static/app/css/plugins/.gitinclude"
+    },
+    "img/.gitinclude": {
+      "name": "img/.gitinclude",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/img/.gitinclude"
     },
     "js/plugins/alpine.min.js": {
       "name": "js/plugins/alpine.min.js",
@@ -32,6 +52,10 @@
     "js/plugins/chart.js": {
       "name": "js/plugins/chart.js",
       "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/chart.js"
+    },
+    "js/plugins/fontawesome.js": {
+      "name": "js/plugins/fontawesome.js",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/fontawesome.js"
     },
     "js/plugins/htmx.min.js": {
       "name": "js/plugins/htmx.min.js",
@@ -48,14 +72,17 @@
   },
   "chunks": {
     "main": [
+      "css/main.bundle.css",
       "js/main.js"
     ],
-    "print": [
-      "js/print.js"
+    "login": [
+      "js/login.js"
     ],
     "shared": [
       "js/runtime.js",
       "js/shared.js"
     ]
-  }
+  },
+  "error": "ModuleNotFoundError",
+  "message": "Module not found: Error: Can't resolve './helper' in '/home/rizkisasri/django-restapi-demo/source'"
 }

@@ -15,13 +15,13 @@ module.exports = {
       import: './source/main.js',
       dependOn: 'shared'
     },
-    print: {
-      import: './source/print.js',
+    login: {
+      import: './source/login.js',
       dependOn: 'shared',
     },
     shared: [
+      'bootstrap/dist/js/bootstrap.bundle.js',
       'regenerator-runtime/runtime.js',
-      'alpinejs',
     ]
   },
   output: {
