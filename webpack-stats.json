@@ -45,6 +45,10 @@
       "name": "img/.gitinclude",
       "path": "/home/rizkisasri/django-restapi-demo/app/static/app/img/.gitinclude"
     },
+    "img/favicon.png": {
+      "name": "img/favicon.png",
+      "path": "/home/rizkisasri/django-restapi-demo/app/static/app/img/favicon.png"
+    },
     "js/plugins/alpine.min.js": {
       "name": "js/plugins/alpine.min.js",
       "path": "/home/rizkisasri/django-restapi-demo/app/static/app/js/plugins/alpine.min.js"
@@ -82,7 +86,5 @@
       "js/runtime.js",
       "js/shared.js"
     ]
-  },
-  "error": "ModuleNotFoundError",
-  "message": "Module not found: Error: Can't resolve './helper' in '/home/rizkisasri/django-restapi-demo/source'"
+  }
 }
